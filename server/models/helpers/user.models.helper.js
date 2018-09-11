@@ -1,15 +1,15 @@
 import UserModel from '../user';
 
-// export const findAll = () => {
-//     const condition = {};
+export const findAll = () => {
+    const condition = {};
 
-//     try {
-//         return UserModel.find(condition).lean(true).exec();
-//     } catch (e) {
-//         console.log(e);
-//         return Promise.resolve();
-//     }
-// };
+    try {
+        return UserModel.find(condition).lean(true).exec();
+    } catch (e) {
+        console.log(e);
+        return Promise.resolve();
+    }
+};
 
 
 export const saveUser = ({ title, content }) => {

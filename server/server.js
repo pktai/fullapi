@@ -12,7 +12,7 @@ const app = express();
 app.use(compression());
 app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
-app.use(morgan('tiny'));
+app.use(morgan('tiny')); //example: POST /api/users 200 154 - 3.074 ms
 app.use(session({
     secret: 'keyboard cat',
   resave: false,
@@ -24,7 +24,7 @@ app.use(session({
 mongoose.Promise = global.Promise;
 
 // Connecting to the database
-mongoose.connect(config.linkMongo, {
+mongoose.connect(config.urlMongo, {
 	useNewUrlParser: true
 }).then(() => {
     console.log("Successfully connected to the database");    
@@ -46,5 +46,5 @@ import userRoutes from './routes/user.routes';
 
 // listen for requests
 app.listen(config.port, () => {
-    console.log("Server is listening on port 3000");
+    console.log("Server is listening on port 8000");
 });
