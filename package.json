@@ -26,9 +26,12 @@
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
+    "md5": "^2.2.1",
     "mongoose": "^5.2.8",
+    "mongoose-delete": "^0.4.0",
     "morgan": "^1.9.0",
     "nodemon": "^1.18.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "sha1": "^1.1.1"
   }
 }
