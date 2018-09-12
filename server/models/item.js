@@ -1,4 +1,4 @@
-import mongoose, { mongo } from 'mongoose';
+import mongoose from 'mongoose';
 import mongooseDel from 'mongoose-delete';
 
 const ItemSchema = mongoose.Schema({
@@ -11,6 +11,6 @@ const ItemSchema = mongoose.Schema({
     timestamps: true
 });
 
-ItemSchema.plugin(ItemSchema);
+ItemSchema.plugin(mongooseDel);
 
 export default mongoose.model('Item', ItemSchema);

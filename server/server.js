@@ -39,9 +39,11 @@ app.get('/', (req, res) => {
 });
 
 import userRoutes from './routes/user.routes';
+import itemRoutes from './routes/item.routes';
 
-((myapp)=> {
-  userRoutes(myapp);
+((myApp)=> {
+  userRoutes(myApp);
+  itemRoutes(myApp);
 })(app);
 
 // listen for requests

@@ -25,6 +25,7 @@ export const find = (userName) => {
     const condition = {
         userName
     };
+
     try {
         return UserModel.findOne(condition).lean(true).exec();
     } catch (e) {
