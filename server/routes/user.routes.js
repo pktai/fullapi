@@ -12,4 +12,5 @@ export default (app) => {
 
     // app.route(`${routing}/users/:userName`)
     // .get(UserController.findUser);
+    console.log('hello');
 }
